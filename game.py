@@ -68,27 +68,7 @@ def minimax(matrix,depth,usr_turn):
     # computer played its chance to check other moves
 def bestMove(matrix,depth):
     bestMove = [-1,-1]
-    # trying to play winning move
-    for m in range(3):
-    	for n in range(3):
-        	if matrix[m][n]==-1:
-                	matrix[m][n]=comp_inpt
-                        if game_over(matrix)==-20:
-                        	matrix[m][n]=-1
-                                bestMove=[m,n]
-                                return bestMove
-                        matrix[m][n]=-1 
-    # blocking others winning move
-    for k in range(3):
-    	for l in range(3):
-        	if matrix[k][l]==-1:
-                	matrix[k][l]=usr_inpt
-                        if game_over(matrix)==20:
-                        	matrix[k][l]=-1
-                                bestMove=[k,l]
-                                return bestMove
-                        matrix[k][l]=-1
-    # now for the best move
+    # for the best move
     bestVal=1000
     for i in range(3):
     	for j in range(3):
@@ -105,7 +85,7 @@ matrix=[[-1,-1,-1],[-1,-1,-1],[-1,-1,-1]]
 usr_inpt=int(input("please choose either 0 or 1"))
 if usr_inpt==0 or usr_inpt==1:
     comp_inpt=1-usr_inpt
-i=0
+i=1
 while True:
     # user's move
     move(matrix)
