@@ -98,8 +98,8 @@ int minimax(char **s,int depth,int alpha,int beta,bool turn,int d) // d is my de
 	if(gameOver(s)) return gameOver(s);
 	if (depth==42) return 0;
 	if (d==11){
-		//if (abs(alpha)>abs(beta)) return -20;
-		//else if (abs(alpha)<abs(beta)) return 20;
+		if (abs(alpha)>abs(beta)) return -40;
+		else if (abs(alpha)<abs(beta)) return 40;
 		return 0;
 	}
 	if (turn)
