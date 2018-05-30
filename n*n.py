@@ -91,7 +91,7 @@ def minimax(matrix,dep,usr_turn,alpha,beta):
                 	break                    
         return bestVal+dep
     # computer played others chance to check other moves
-    else:
+    else: 
         f=0
         bestVal=-1000
         for i in range(n):
